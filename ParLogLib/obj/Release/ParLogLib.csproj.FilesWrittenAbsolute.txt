@@ -1,0 +1,5 @@
+/home/johannes/dev/ParLog/ParLogLib/obj/Release/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/johannes/dev/ParLog/ParLogLib/bin/Release/ParLogLib.dll.mdb
+/home/johannes/dev/ParLog/ParLogLib/bin/Release/ParLogLib.dll
+/home/johannes/dev/ParLog/ParLogLib/obj/Release/ParLogLib.dll
+/home/johannes/dev/ParLog/ParLogLib/obj/Release/ParLogLib.dll.mdb

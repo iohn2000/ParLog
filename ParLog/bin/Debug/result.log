@@ -1,0 +1,16 @@
+04 Feb 2017 15:02:42,432||[ServerScheduler_Worker-1]||DEBUG||Kapsch.IS.EDP.WFActivity.TaskDecision.TaskDecisionActivityWait|| 031c0b7cc17a4c5eb7ea12deeac56cd2 Dumping waitItemWFE: AWI_ID=125      AWI_InstanceID=WOIN_3c7ffe5a2bac46d38e405c6a6cbcc5a5    AWI_ActivityInstanceID=3.TaskDecisionActivity   AWI_Status=Wait         AWI_StartDate=2/2/2017  AWI_DueDate=3/4/2017    AWI_CompletedDate=null  AWI_Config=<root>
+  <item name="newLinkedTaskID" value="15a6593d85a84a60a19f6d54a8f6879d" />
+  <item name="wfUniqueUD" value="WOIN_3c7ffe5a2bac46d38e405c6a6cbcc5a5__3.TaskDecisionActivity" />
+  <item name="taskGUID" value="TAIT_3d4ba72c9ef340feb3a8aff888f81703" />
+</root>
+
+04 Feb 2017 15:02:42,514||[ServerScheduler_Worker-1]||DEBUG||Kapsch.IS.EDP.WFActivity.TaskDecision.TaskDecisionActivityWait||search for tasks with linkedTaskID: 031c0b7cc17a4c5eb7ea12deeac56cd2
+04 Feb 2017 15:02:50,778||[ServerScheduler_Worker-5]||INFO ||Kapsch.IS.ProcessEngine.Runtime||RunTimeGuid:ec341d40-d868-471e-9fe8-c7114b57f9be Workflow RunEngine() started. 031c0b7cc17a4c5eb7ea12deeac56cd2
+04 Feb 2017 15:03:26,162||[ServerScheduler_Worker-3]||DEBUG||Kapsch.IS.ProcessEngine.Engine||No logging context available. : before updating workflow database table WorkflowIntances 031c0b7cc17a4c5eb7ea12deeac56cd2
+04 Feb 2017 15:03:27,045||[ServerScheduler_Worker-3]||DEBUG||Kapsch.IS.EDP.WFActivity.TaskDecision.TaskDecisionActivityWait||Dumping waitItemWFE: AWI_ID=125 031c0b7cc17a4c5eb7ea12deeac56cd2     AWI_InstanceID=WOIN_3c7ffe5a2bac46d38e405c6a6cbcc5a5    AWI_ActivityInstanceID=3.TaskDecisionActivity   AWI_Status=Wait         AWI_StartDate=2/2/2017  AWI_DueDate=3/4/2017    AWI_CompletedDate=null  AWI_Config=<root>
+  <item name="newLinkedTaskID" value="15a6593d85a84a60a19f6d54a8f6879d" />
+  <item name="wfUniqueUD" value="WOIN_3c7ffe5a2bac46d38e405c6a6cbcc5a5__3.TaskDecisionActivity" />
+  <item name="taskGUID" value="TAIT_3d4ba72c9ef340feb3a8aff888f81703" />
+</root>
+
+04 Feb 2017 15:03:35,859||[ServerScheduler_Worker-4]||INFO ||Kapsch.IS.ProcessEngine.Runtime||RunTimeGuid:e42b86b4-0653-4663-8692-6bc205ff61bb Workflow RunEngine() started. 031c0b7cc17a4c5eb7ea12deeac56cd2

@@ -1,0 +1,11 @@
+/home/johannes/dev/ParLog/ParLog/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/johannes/dev/ParLog/ParLog/bin/Debug/ParLogLib.dll
+/home/johannes/dev/ParLog/ParLog/bin/Debug/ParLogLib.dll.mdb
+/home/johannes/dev/ParLog/ParLog/bin/Debug/ParLog.exe.mdb
+/home/johannes/dev/ParLog/ParLog/bin/Debug/ParLog.exe
+/home/johannes/dev/ParLog/ParLog/obj/x86/Debug/ParLog.exe
+/home/johannes/dev/ParLog/ParLog/obj/x86/Debug/ParLog.exe.mdb
+/home/johannes/dev/ParLog/ParLog/bin/Debug/FluentCommandLineParser.dll
+/home/johannes/dev/ParLog/ParLog/bin/Debug/test.log
+/home/johannes/dev/ParLog/ParLog/bin/Debug/test _1.log
+/home/johannes/dev/ParLog/ParLog/bin/Debug/test _2.log
