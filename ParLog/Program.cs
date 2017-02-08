@@ -56,7 +56,8 @@ namespace ParLog
 
 			if (result.HasErrors == false)
 			{
-				ParLogLib llib = new ParLogLib(p.Object);
+                FileManager fm = new FileManager(p.Object.FileWildCard);
+                ParLogLib llib = new ParLogLib(fm,p.Object.StartOfLinePattern, p.Object.SearchPattern);
 				llib.Parse();
 			}
 			else
