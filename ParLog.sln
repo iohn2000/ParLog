@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParLog", "ParLog\ParLog.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParLogLib", "ParLogLib\ParLogLib.csproj", "{6AE6BC9A-07FC-42E3-B98B-CCC15FDB067B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParLogLib_UnitTest", "ParLogLib_UnitTest\ParLogLib_UnitTest.csproj", "{60B8233E-F7D6-433B-BFC7-8068359590AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -15,6 +17,10 @@ Global
 		{60760A79-A520-4B6A-AE8B-51F3B828CA54}.Debug|x86.Build.0 = Debug|x86
 		{60760A79-A520-4B6A-AE8B-51F3B828CA54}.Release|x86.ActiveCfg = Release|x86
 		{60760A79-A520-4B6A-AE8B-51F3B828CA54}.Release|x86.Build.0 = Release|x86
+		{60B8233E-F7D6-433B-BFC7-8068359590AB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{60B8233E-F7D6-433B-BFC7-8068359590AB}.Debug|x86.Build.0 = Debug|Any CPU
+		{60B8233E-F7D6-433B-BFC7-8068359590AB}.Release|x86.ActiveCfg = Release|Any CPU
+		{60B8233E-F7D6-433B-BFC7-8068359590AB}.Release|x86.Build.0 = Release|Any CPU
 		{6AE6BC9A-07FC-42E3-B98B-CCC15FDB067B}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{6AE6BC9A-07FC-42E3-B98B-CCC15FDB067B}.Debug|x86.Build.0 = Debug|Any CPU
 		{6AE6BC9A-07FC-42E3-B98B-CCC15FDB067B}.Release|x86.ActiveCfg = Release|Any CPU
