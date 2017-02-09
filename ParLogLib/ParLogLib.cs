@@ -23,12 +23,12 @@ namespace ParLog
 		{
             foreach (string file in this.fManager.GetAllFilenamesWildcard())
 			{
-				bool matchingMode = true;
+				
 
 				Match mStart, mWorkflowMatch;
                 foreach (string line in this.fManager.GetLinesOfFile(file)) 
 				{
-
+                    bool matchingMode = false;
 					mStart = StartOfLogEntryRegex.Match (line);	
 					mWorkflowMatch = SearchTermRegex.Match(line);
 
@@ -52,6 +52,8 @@ namespace ParLog
 				}
 			}
 		}
+
+    
 
 	}
 }
