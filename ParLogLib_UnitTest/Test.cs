@@ -10,17 +10,15 @@ namespace ParLogLib_UnitTest
     [TestFixture()]
     public class Test
     {
+
         [Test(), Category("simple tests")]
-        public void All_Lines_Match()
+        public void KomplexCase()
         {
             var mock = new Mock<IFileManager>();
             mock.Setup(foo => foo.GetAllFilenamesWildcard()).Returns(new List<string>(){"eins"});
-            mock.Setup(foo => foo.GetLinesOfFile("eins")).Returns(Eins_Lines());
+            mock.Setup(foo => foo.GetLinesOfFile("eins")).Returns(TestLines());
 
-            ParLogLib llib = new ParLogLib(mock.Object, 
-                //@"^[0-9]{2} [\w]{3} [0-9]{4} [0-9]{2}:[0-9]{2}:[0-9]{2},[0-9]{3}", 
-                @"^aa", 
-                "zeile");
+            ParLogLib llib = new ParLogLib(mock.Object, @"^in", "zeile");
 
             // catch standard output
             using (StringWriter sw = new StringWriter())
@@ -29,9 +27,20 @@ namespace ParLogLib_UnitTest
                 llib.Parse();
 
                 string expected = 
-                    "aa erste zeile" + Environment.NewLine
-                    + "aa zweite zeile" + Environment.NewLine
-                    + "aa dritte zeile" + Environment.NewLine; 
+                    @"in erste zeile
+in zweite zeile
+  multi line 2.5 no key word
+in dritte zeile
+  mehr zu drei
+  noch mehr zu drei
+in vierte zeile
+  mehr zu zeile 4
+in zeile
+out zeile
+in zeile
+out ohne dem wort
+in wieder eine zeile
+"; 
                     //+ "aa dritte zeile" + Environment.NewLine;
 
                 Console.SetOut(new StreamWriter(Console.OpenStandardOutput()));
@@ -42,10 +51,32 @@ namespace ParLogLib_UnitTest
             }
         }
 
-        private static IEnumerable<string> Eins_Lines()
+        private static IEnumerable<string> TestLines()
         {
-            List<string> xx = new List<string>(){ "aa erste zeile","aa zweite zeile","aa dritte zeile", "bb vierte zeile"};
-            foreach (string x in xx)
+            string testLines=@"
+in erste zeile
+in zweite zeile
+  multi line 2.5 no key word
+in dritte zeile
+  mehr zu drei
+  noch mehr zu drei
+in vierte zeile
+  mehr zu zeile 4
+in aber kein keyword
+  mehr ohne keyword
+  mehr mit keyword
+out ohne passenden keyword
+out mt zeile als search term
+in zeile
+out zeile
+in zeile
+out ohne dem wort
+in but no keyword
+ dont show this
+ neither that
+in wieder eine zeile";
+
+            foreach (string x in testLines.Split(new string[]{ Environment.NewLine },StringSplitOptions.RemoveEmptyEntries))
                 yield return x;
 
         }

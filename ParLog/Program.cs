@@ -56,7 +56,7 @@ namespace ParLog
 
 			if (result.HasErrors == false)
 			{
-                FileManager fm = new FileManager(p.Object.FileWildCard);
+                IFileManager fm = new FileManager(p.Object.FileWildCard);
                 ParLogLib llib = new ParLogLib(fm,p.Object.StartOfLinePattern, p.Object.SearchPattern);
 				llib.Parse();
 			}
