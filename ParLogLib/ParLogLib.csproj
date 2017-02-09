@@ -35,6 +35,7 @@
     <Compile Include="ParLogLib.cs" />
     <Compile Include="CmdArguments.cs" />
     <Compile Include="FileManager.cs" />
+    <Compile Include="IFileManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

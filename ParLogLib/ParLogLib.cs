@@ -8,11 +8,11 @@ namespace ParLog
 	public class ParLogLib
 	{
 		// '04 Feb 2017 15:02:50,778 - this is a start of line
-        private FileManager fManager;
+        private IFileManager fManager;
 		private Regex StartOfLogEntryRegex;
         private Regex SearchTermRegex;
 
-        public ParLogLib(FileManager fMgr, string startOfLogEntryPattern, string searchPattern)
+        public ParLogLib(IFileManager fMgr, string startOfLogEntryPattern, string searchPattern)
         {
             this.fManager = fMgr;
             this.StartOfLogEntryRegex = new Regex(startOfLogEntryPattern, RegexOptions.IgnoreCase);

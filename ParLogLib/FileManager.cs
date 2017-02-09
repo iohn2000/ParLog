@@ -4,7 +4,7 @@ using System.IO;
 
 namespace ParLog
 {
-    public class FileManager
+    public class FileManager : IFileManager
     {
         private string WildCard;
 
@@ -29,6 +29,7 @@ namespace ParLog
         {
             return File.ReadLines(fname);
         }
+
     }
 }
 
