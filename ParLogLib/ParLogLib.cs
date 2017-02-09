@@ -25,20 +25,20 @@ namespace ParLog
 			{
                 bool matchingMode = false;
 
-				Match mStart, mWorkflowMatch;
+                Match mStart, mSearchTermMatch;
                 foreach (string line in this.fManager.GetLinesOfFile(file)) 
 				{
                    
 					mStart = StartOfLogEntryRegex.Match (line);	
-					mWorkflowMatch = SearchTermRegex.Match(line);
+					mSearchTermMatch = SearchTermRegex.Match(line);
 
-					if (mStart.Success && mWorkflowMatch.Success) 
+					if (mStart.Success && mSearchTermMatch.Success) 
 					{
 						// new log entry found	
 						Console.WriteLine (line);
 						matchingMode = true;
 					} 
-					else if (mStart.Success && !mWorkflowMatch.Success)
+					else if (mStart.Success && !mSearchTermMatch.Success)
 					{
 						matchingMode = false;
 					}
