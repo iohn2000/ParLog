@@ -47,9 +47,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ParLogLib\ParLogLib.csproj">
-      <Project>{6AE6BC9A-07FC-42E3-B98B-CCC15FDB067B}</Project>
-      <Name>ParLogLib</Name>
+    <ProjectReference Include="..\ParLog\ParLog.csproj">
+      <Project>{60760A79-A520-4B6A-AE8B-51F3B828CA54}</Project>
+      <Name>ParLog</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

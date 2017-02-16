@@ -3,9 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParLog", "ParLog\ParLog.csproj", "{60760A79-A520-4B6A-AE8B-51F3B828CA54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParLogLib", "ParLogLib\ParLogLib.csproj", "{6AE6BC9A-07FC-42E3-B98B-CCC15FDB067B}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParLogLib_UnitTest", "ParLogLib_UnitTest\ParLogLib_UnitTest.csproj", "{60B8233E-F7D6-433B-BFC7-8068359590AB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6F0D44A4-FB16-4793-B7D9-D7D5707064DB}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +24,7 @@ Global
 		{60B8233E-F7D6-433B-BFC7-8068359590AB}.Debug|x86.Build.0 = Debug|Any CPU
 		{60B8233E-F7D6-433B-BFC7-8068359590AB}.Release|x86.ActiveCfg = Release|Any CPU
 		{60B8233E-F7D6-433B-BFC7-8068359590AB}.Release|x86.Build.0 = Release|Any CPU
-		{6AE6BC9A-07FC-42E3-B98B-CCC15FDB067B}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{6AE6BC9A-07FC-42E3-B98B-CCC15FDB067B}.Debug|x86.Build.0 = Debug|Any CPU
-		{6AE6BC9A-07FC-42E3-B98B-CCC15FDB067B}.Release|x86.ActiveCfg = Release|Any CPU
-		{6AE6BC9A-07FC-42E3-B98B-CCC15FDB067B}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 EndGlobal

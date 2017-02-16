@@ -33,7 +33,9 @@ namespace ParLog
 				.As('s', "startPattern")
 				.WithDescription("regex pattern to define when a new log entry starts")
 				.SetDefault(defaultStartPattern); 
-			
+
+            p.Setup(arg => arg.ShowPerformance).As("--performance").WithDescription("only show performance statistics").SetDefault(false);
+
 			p.SetupHelp("?", "help")
 				.Callback(text => 
 					{
@@ -57,7 +59,7 @@ namespace ParLog
 			if (result.HasErrors == false)
 			{
                 IFileManager fm = new FileManager(p.Object.FileWildCard);
-                ParLogLib llib = new ParLogLib(fm,p.Object.StartOfLinePattern, p.Object.SearchPattern);
+                ParLogLib llib = new ParLogLib(fm, p.Object);
 				llib.Parse();
 			}
 			else

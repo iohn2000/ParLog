@@ -21,6 +21,8 @@ namespace ParLog
             get;
             set;
         }
+
+        public bool ShowPerformance { get; set; }
     }
 }
 

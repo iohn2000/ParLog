@@ -1,15 +1,22 @@
 ﻿<Properties StartupItem="ParLog/ParLog.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ParLogLib/ParLogLib_TEST.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="ParLogLib/ParLogLib.cs" Line="1" Column="1" />
-      <File FileName="ParLogLib/FileManager.cs" Line="30" Column="21" />
-      <File FileName="ParLogLib/packages.config" Line="1" Column="1" />
-      <File FileName="ParLogLib/ParLogLib_TEST.cs" Line="16" Column="35" />
+      <File FileName="ParLogLib/ParLogLib.cs" Line="28" Column="42" />
     </Files>
+    <Pads>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State name="__root__">
+          <Node name="ParLog" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/home/johannes/dev/ParLog/ParLogLib/ParLogLib.cs" line="24" column="1" />
+      <Breakpoint file="/home/johannes/dev/ParLog/ParLogLib_UnitTest/Test.cs" line="48" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

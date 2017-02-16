@@ -11,12 +11,14 @@ namespace ParLog
         private IFileManager fManager;
 		private Regex StartOfLogEntryRegex;
         private Regex SearchTermRegex;
+        private bool ShowPerformance = false;
 
-        public ParLogLib(IFileManager fMgr, string startOfLogEntryPattern, string searchPattern)
+        public ParLogLib(IFileManager fMgr, CmdArguments args/*string startOfLogEntryPattern, string searchPattern*/)
         {
             this.fManager = fMgr;
-            this.StartOfLogEntryRegex = new Regex(startOfLogEntryPattern, RegexOptions.IgnoreCase);
-            this.SearchTermRegex = new Regex (searchPattern, RegexOptions.IgnoreCase);
+            this.StartOfLogEntryRegex = new Regex(args.StartOfLinePattern, RegexOptions.IgnoreCase);
+            this.SearchTermRegex = new Regex (args.SearchPattern, RegexOptions.IgnoreCase);
+            this.ShowPerformance = args.ShowPerformance;
         }
 
 		public void Parse()

@@ -1,9 +1,9 @@
 ﻿using NUnit.Framework;
 using System;
 using Moq;
-using ParLog;
 using System.Collections.Generic;
 using System.IO;
+using ParLog;
 
 namespace ParLogLib_UnitTest
 {
@@ -18,7 +18,12 @@ namespace ParLogLib_UnitTest
             mock.Setup(foo => foo.GetAllFilenamesWildcard()).Returns(new List<string>(){"eins"});
             mock.Setup(foo => foo.GetLinesOfFile("eins")).Returns(TestLines());
 
-            ParLogLib llib = new ParLogLib(mock.Object, @"^in", "zeile");
+            CmdArguments cmd = new CmdArguments();
+            cmd.StartOfLinePattern = @"^in";
+            cmd.SearchPattern = "zeile";
+            cmd.ShowPerformance = false;
+
+            ParLogLib llib = new ParLogLib(mock.Object, cmd);
 
             // catch standard output
             using (StringWriter sw = new StringWriter())
