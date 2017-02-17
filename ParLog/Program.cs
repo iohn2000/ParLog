@@ -34,7 +34,7 @@ namespace ParLog
 				.WithDescription("regex pattern to define when a new log entry starts")
 				.SetDefault(defaultStartPattern); 
 
-            p.Setup(arg => arg.ShowPerformance).As("--performance").WithDescription("only show performance statistics").SetDefault(false);
+            p.Setup(arg => arg.ShowPerformance).As("performance").WithDescription("only show performance statistics").SetDefault(false);
 
 			p.SetupHelp("?", "help")
 				.Callback(text => 

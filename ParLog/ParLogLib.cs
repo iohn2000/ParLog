@@ -2,6 +2,7 @@
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace ParLog
 {
@@ -12,6 +13,7 @@ namespace ParLog
 		private Regex StartOfLogEntryRegex;
         private Regex SearchTermRegex;
         private bool ShowPerformance = false;
+        private Stopwatch stopwatch = new Stopwatch();
 
         public ParLogLib(IFileManager fMgr, CmdArguments args/*string startOfLogEntryPattern, string searchPattern*/)
         {
@@ -23,6 +25,11 @@ namespace ParLog
 
 		public void Parse()
 		{
+            if (this.ShowPerformance)
+            {
+                stopwatch.Start();
+            }
+
             foreach (string file in this.fManager.GetAllFilenamesWildcard())
 			{
                 bool matchingMode = false;
@@ -53,6 +60,11 @@ namespace ParLog
 					}
 				}
 			}
+            if (this.ShowPerformance)
+            {
+                stopwatch.Stop();
+                Console.WriteLine("Time Elapsed: {0} ms", stopwatch.Elapsed.Milliseconds);
+            }
 		}
 
     
