@@ -11,4 +11,5 @@ this corresponds to date format: e.g.: 04 Feb 2017 15:02:50,778
 	p:pattern		the regex pattern to filter the file(s)
 	s:startPattern		regex pattern to define when a new log entry starts
 
-example : ParLog -f=*.log -p=findMe
+examples : ParLog -f=*.log -p=findMe
+           cat log.txt | ParLog.exe -p=findMe -s=^start
