@@ -4,11 +4,11 @@ using System.IO;
 
 namespace ParLog
 {
-    public class FileManager : IFileManager
+    public class FileInReader : IInputManager
     {
         private string WildCard;
 
-        public FileManager(string wildCard)
+        public FileInReader(string wildCard)
         {
             this.WildCard = wildCard;
         }
@@ -25,7 +25,7 @@ namespace ParLog
             return new List<string>(files);
         }
 
-        public IEnumerable<string> GetLinesOfFile(string fname)
+        public IEnumerable<string> GetLinesOfContent(string fname)
         {
             return File.ReadLines(fname);
         }

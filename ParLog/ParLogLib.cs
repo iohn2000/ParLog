@@ -9,15 +9,15 @@ namespace ParLog
 	public class ParLogLib
 	{
 		// '04 Feb 2017 15:02:50,778 - this is a start of line
-        private IFileManager fManager;
+        private IInputManager ContentInputManager;
 		private Regex StartOfLogEntryRegex;
         private Regex SearchTermRegex;
         private bool ShowPerformance = false;
         private Stopwatch stopwatch = new Stopwatch();
 
-        public ParLogLib(IFileManager fMgr, CmdArguments args/*string startOfLogEntryPattern, string searchPattern*/)
+        public ParLogLib(IInputManager contentInputManager, CmdArguments args)
         {
-            this.fManager = fMgr;
+            this.ContentInputManager = contentInputManager;
             this.StartOfLogEntryRegex = new Regex(args.StartOfLinePattern, RegexOptions.IgnoreCase);
             this.SearchTermRegex = new Regex (args.SearchPattern, RegexOptions.IgnoreCase);
             this.ShowPerformance = args.ShowPerformance;
@@ -30,14 +30,15 @@ namespace ParLog
                 stopwatch.Start();
             }
 
-            foreach (string file in this.fManager.GetAllFilenamesWildcard())
+            foreach (string file in this.ContentInputManager.GetAllFilenamesWildcard())
 			{
                 bool matchingMode = false;
 
                 Match mStart, mSearchTermMatch;
-                foreach (string line in this.fManager.GetLinesOfFile(file)) 
+                foreach (string line in this.ContentInputManager.GetLinesOfContent(file)) 
 				{
-                   
+                    if (line == null) continue;
+                    
 					mStart = StartOfLogEntryRegex.Match (line);	
 					mSearchTermMatch = SearchTermRegex.Match(line);
 

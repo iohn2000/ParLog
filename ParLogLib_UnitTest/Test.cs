@@ -14,9 +14,9 @@ namespace ParLogLib_UnitTest
         [Test(), Category("simple tests")]
         public void KomplexCase()
         {
-            var mock = new Mock<IFileManager>();
+            var mock = new Mock<IInputManager>();
             mock.Setup(foo => foo.GetAllFilenamesWildcard()).Returns(new List<string>(){"eins"});
-            mock.Setup(foo => foo.GetLinesOfFile("eins")).Returns(TestLines());
+            mock.Setup(foo => foo.GetLinesOfContent("eins")).Returns(TestLines());
 
             CmdArguments cmd = new CmdArguments();
             cmd.StartOfLinePattern = @"^in";

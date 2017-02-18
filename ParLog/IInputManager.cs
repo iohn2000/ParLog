@@ -3,10 +3,10 @@ using System.Collections.Generic;
 
 namespace ParLog
 {
-    public interface IFileManager
+    public interface IInputManager
     {
         List<string> GetAllFilenamesWildcard();
-        IEnumerable<string> GetLinesOfFile(string fname);
+        IEnumerable<string> GetLinesOfContent(string fname);
     }
 }
 
