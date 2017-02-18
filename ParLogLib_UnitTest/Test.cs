@@ -46,12 +46,8 @@ in zeile
 out ohne dem wort
 in wieder eine zeile
 "; 
-                    //+ "aa dritte zeile" + Environment.NewLine;
-
                 Console.SetOut(new StreamWriter(Console.OpenStandardOutput()));
-
                 Console.WriteLine(sw.ToString());
-
                 Assert.AreEqual(expected, sw.ToString());
             }
         }

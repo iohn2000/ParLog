@@ -31,9 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="FluentCommandLineParser">
-      <HintPath>..\packages\FluentCommandLineParser.1.4.3\lib\net35\FluentCommandLineParser.dll</HintPath>
-    </Reference>
+    <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
@@ -42,9 +40,71 @@
     <Compile Include="FileManager.cs" />
     <Compile Include="IFileManager.cs" />
     <Compile Include="ParLogLib.cs" />
+    <Compile Include="FCLP\CommandLineParserErrorFormatter.cs" />
+    <Compile Include="FCLP\FluentCommandLineBuilderT.cs" />
+    <Compile Include="FCLP\FluentCommandLineParser.cs" />
+    <Compile Include="FCLP\FluentCommandLineParserT.cs" />
+    <Compile Include="FCLP\ICommandLineOptionBuilderFluent.cs" />
+    <Compile Include="FCLP\ICommandLineOptionFluent.cs" />
+    <Compile Include="FCLP\ICommandLineOptionFormatter.cs" />
+    <Compile Include="FCLP\ICommandLineParserError.cs" />
+    <Compile Include="FCLP\ICommandLineParserErrorFormatter.cs" />
+    <Compile Include="FCLP\ICommandLineParserResult.cs" />
+    <Compile Include="FCLP\IFluentCommandLineBuilderT.cs" />
+    <Compile Include="FCLP\IFluentCommandLineParser.cs" />
+    <Compile Include="FCLP\IFluentCommandLineParserT.cs" />
+    <Compile Include="FCLP\IHelpCommandLineOptionFluent.cs" />
+    <Compile Include="FCLP\InvalidOptionNameException.cs" />
+    <Compile Include="FCLP\OptionAlreadyExistsException.cs" />
+    <Compile Include="FCLP\OptionSyntaxException.cs" />
+    <Compile Include="FCLP\UnsupportedTypeException.cs" />
+    <Compile Include="FCLP\Internals\CommandLineOption.cs" />
+    <Compile Include="FCLP\Internals\CommandLineOptionBuilderFluent.cs" />
+    <Compile Include="FCLP\Internals\CommandLineOptionFactory.cs" />
+    <Compile Include="FCLP\Internals\CommandLineOptionFormatter.cs" />
+    <Compile Include="FCLP\Internals\EmptyHelpCommandLineOption.cs" />
+    <Compile Include="FCLP\Internals\Errors\CommandLineParserErrorBase.cs" />
+    <Compile Include="FCLP\Internals\Errors\ExpectedOptionNotFoundParseError.cs" />
+    <Compile Include="FCLP\Internals\Errors\OptionSyntaxParseError.cs" />
+    <Compile Include="FCLP\Internals\Extensions\UsefulExtension.cs" />
+    <Compile Include="FCLP\Internals\HelpCommandLineOption.cs" />
+    <Compile Include="FCLP\Internals\ICommandLineOption.cs" />
+    <Compile Include="FCLP\Internals\ICommandLineOptionFactory.cs" />
+    <Compile Include="FCLP\Internals\ICommandLineOptionResult.cs" />
+    <Compile Include="FCLP\Internals\IHelpCommandLineOption.cs" />
+    <Compile Include="FCLP\Internals\IHelpCommandLineOptionResult.cs" />
+    <Compile Include="FCLP\Internals\Parsing\CommandLineOptionGrouper.cs" />
+    <Compile Include="FCLP\Internals\Parsing\CommandLineParserEngineMark2.cs" />
+    <Compile Include="FCLP\Internals\Parsing\CommandLineParserResult.cs" />
+    <Compile Include="FCLP\Internals\Parsing\ICommandLineOptionParserFactory.cs" />
+    <Compile Include="FCLP\Internals\Parsing\ICommandLineParserEngine.cs" />
+    <Compile Include="FCLP\Internals\Parsing\OptionArgumentParser.cs" />
+    <Compile Include="FCLP\Internals\Parsing\OptionParsers\BoolCommandLineOptionParser.cs" />
+    <Compile Include="FCLP\Internals\Parsing\OptionParsers\CommandLineOptionParserFactory.cs" />
+    <Compile Include="FCLP\Internals\Parsing\OptionParsers\DateTimeCommandLineOptionParser.cs" />
+    <Compile Include="FCLP\Internals\Parsing\OptionParsers\DoubleCommandLineOptionParser.cs" />
+    <Compile Include="FCLP\Internals\Parsing\OptionParsers\EnumCommandLineOptionParser.cs" />
+    <Compile Include="FCLP\Internals\Parsing\OptionParsers\EnumFlagCommandLineOptionParser.cs" />
+    <Compile Include="FCLP\Internals\Parsing\OptionParsers\ICommandLineOptionParser.cs" />
+    <Compile Include="FCLP\Internals\Parsing\OptionParsers\Int32CommandLineOptionParser.cs" />
+    <Compile Include="FCLP\Internals\Parsing\OptionParsers\Int64CommandLineOptionParser.cs" />
+    <Compile Include="FCLP\Internals\Parsing\OptionParsers\ListCommandLineOptionParser.cs" />
+    <Compile Include="FCLP\Internals\Parsing\OptionParsers\NullableCommandLineOptionParser.cs" />
+    <Compile Include="FCLP\Internals\Parsing\OptionParsers\NullableEnumCommandLineOptionParser.cs" />
+    <Compile Include="FCLP\Internals\Parsing\OptionParsers\StringCommandLineOptionParser.cs" />
+    <Compile Include="FCLP\Internals\Parsing\OptionParsers\UriCommandLineOptionParser.cs" />
+    <Compile Include="FCLP\Internals\Parsing\ParsedOption.cs" />
+    <Compile Include="FCLP\Internals\Parsing\ParsedOptionFactory.cs" />
+    <Compile Include="FCLP\Internals\Parsing\ParserEngineResult.cs" />
+    <Compile Include="FCLP\Internals\SpecialCharacters.cs" />
+    <Compile Include="FCLP\Internals\Validators\CommandLineOptionValidator.cs" />
+    <Compile Include="FCLP\Internals\Validators\ICommandLineOptionValidator.cs" />
+    <Compile Include="FCLP\Internals\Validators\NoDuplicateOptionValidator.cs" />
+    <Compile Include="FCLP\Internals\Validators\OptionNameValidator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <None Include="packages.config" />
+    <Folder Include="FCLP\" />
+    <Folder Include="FCLP\Internals\" />
   </ItemGroup>
 </Project>
